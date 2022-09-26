@@ -1,6 +1,6 @@
-# YASSLAY (Yet Another Simple Shop, Lists Amazing Yeilds)
+# YASSLAY (Yet Another Simple Shop, Lists Amazing Yields)
 
-YASSLAY (Yet Another Simple Shop, Lists Amazing Yeilds), is a Krist-based shop for modern ComputerCraft. It allows you to easily set up your own shop to sell items in modern ComputerCraft.
+YASSLAY (Yet Another Simple Shop, Lists Amazing Yields), is a Krist-based shop for modern ComputerCraft. It allows you to easily set up your own shop to sell items in modern ComputerCraft.
 
 ## Basic Setup
 
