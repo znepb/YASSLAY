@@ -1,71 +1,127 @@
 return {
-  -- The name of your shop. This will appear at the top of your shop's screen.
-  shopName = "Someone's Shop",
+  display = {
+    -- The name of your shop. This will appear at the top of your shop's screen.
+    -- If webhooks are enabled, this will be the name of the webhook bot
+    shopName = "A Denarius Shop",
 
-  -- Preferbally your name. This will appear at the bottom of your shop's screen, providing info on who to contact is any problems arise.
-  owner = "someone",
+    -- Set to true if you'd like items out of stock to be visible.
+    showOutOfStockItems = true,
+  },
 
-  -- Your shop's color. This should be a hex value for pallete colours.
-  colour = 0xeb5e34,
+  krist = {
+    -- The name you would like to use for this shop.
+    name = "junk.kst",
 
-  -- The name you would like to use for this shop.
-  name = "",
+    -- The Krist adress this shop uses.
+    address = "kznepb2kan",
 
-  -- The Krist adress this shop uses.
-  address = "",
+    -- The private key for the address above. This MUST be in raw-key format.
+    privatekey = "aa2da532faa787093b490340cb78e0b18030f7df5a76120b6f7941e194ee6ac4",
 
-  -- The private key for the address above. This MUST be in raw-key format.
-  privatekey = "",
+    -- Advanced: Krist node URL. Requires trailing /
+    node = "https://krist.dev/",
+  },
 
-  -- The network name of the turtle
-  networkName = "",
+  peripherals = {
+    -- Chests to search for items
+    chests = {"minecraft:chest_0"},
 
-  -- The network name of the monitor to display the shop information on
-  monitorSide = "",
+    -- The network name of the turtle
+    networkName = "turtle_0",
 
-  -- Chests to search for items
-  chests = {""},
+    -- The network name of the monitor to display the shop information on
+    monitorSide = "left",
+  },
 
-  -- Enables attribution at the bottom of the shop pane.
-  attribution = true,
+  heartbeat = {
+    -- Enable heartbeat
+    enable = true,
 
-  -- Set to true if you'd like items out of stock to be visible.
-  showOutOfStockItems = true,
+    -- The side that the redstone lamp (or other) is on.
+    side = "top",
 
-  -- Items you're selling
-  items = {
-    dia = {
-      title = "Diamond",
-      name = "minecraft:diamond",
-      price = 1
+    -- How often the "heart beats"
+    interval = 2
+  },
+
+  stock = {
+    -- The order that items will be rendered in. If you don't want to fiddle with this, you can comment out this line.
+    order = {"dia", "pc", "oak", "stone"},
+
+    -- Items you're selling
+    items = {
+      -- The slug for the item (where players pay to)
+      dia = {
+        -- The title of the item to display.
+        title = "Diamond",
+        -- The ID of the item
+        name = "minecraft:diamond",
+        -- Price of the item
+        price = 3
+      },
+      oak = {
+        title = "Oak Log",
+        name = "minecraft:oak_log",
+        price = 0.1
+      },
+      pc = {
+        title = "Advanced Computer",
+        name = "computercraft:computer_advanced",
+        price = 5
+      },
+      stone = {
+        title = "Stone",
+        name = "minecraft:stone",
+        price = 1
+      }
     },
-    oak = {
-      title = "Oak Log",
-      name = "minecraft:oak_log",
-      price = 0.1
-    },
-    pc = {
-      title = "Advanced Computer",
-      name = "computercraft:computer_advanced",
-      price = 5
-    },
-    stone = {
-      title = "Stone",
-      name = "minecraft:stone",
-      price = 1
+  },
+
+  webhook = {
+    -- A url to a Discord webhook to send logs.
+    url = "https://discord.com/api/webhooks/1057409021633634324/2OCfedid10zVYM0zn8xf19aTZt5uGuJ_8JttTX6UJmILuZhrz6jbwQBt7-KUcyJdhUwA",
+
+    -- Your Discord ID. This will be pinged when an error occurs.
+    ownerUserID = "356209633313947648",
+
+    -- Toggle individual messages
+    messages = {
+      startup = true,
+      sale = true,
+      refund = true,
+      error = true,
     }
   },
 
-  -- Advanced: Krist node URL
-  node = "https://krist.dev",
+  -- Messages that will be used when a refund is issued
+  messages = {
+    nonExistant = "The requested item, %s, does not exist. Please try another item.",
+    notInStock = "Sorry, the item \"%s\" is not in stock.",
+    overpaid = "You overpaid for your purchase. You have been refunded %d Krist.",
+    notEnoughInStock = "You ordered too many items, and not enough were in stock. You have been refunded %d Krist."
+  },
 
   -- Advanced: Sound effects to be played when purchases commence
   soundeffects = {
-    enabled = false,
-    speaker = "",
+    enabled = true,
+    speaker = "speaker_0",
     purchaseFailed = "minecraft:entity.villager.no",
     purchaseSuccess = "minecraft:entity.villager.yes",
     dispensedItems = "minecraft:entity.item.pickup",
     allItemsDispensed = "minecraft:entity.player.levelup",
-  }
+  },
+
+  -- Profit sharing
+  profitSharing = {
+    -- The address to send
+    ["k9kig3qq9n"] = {
+      -- Percentage
+      percent = 80,
+      -- Metadata (for donate meta requirements)
+      meta = "cool=awesome"
+    }
+  },
+
+  -- Advanced: Krist API debug
+  debug = false
 }
