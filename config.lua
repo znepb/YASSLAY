@@ -12,11 +12,8 @@ return {
     -- The name you would like to use for this shop.
     name = "junk.kst",
 
-    -- The Krist adress this shop uses.
-    address = "kznepb2kan",
-
     -- The private key for the address above. This MUST be in raw-key format.
-    privatekey = "aa2da532faa787093b490340cb78e0b18030f7df5a76120b6f7941e194ee6ac4",
+    privatekey = "",
 
     -- Advanced: Krist node URL. Requires trailing /
     node = "https://krist.dev/",
@@ -24,10 +21,10 @@ return {
 
   peripherals = {
     -- Chests to search for items
-    chests = {"minecraft:chest_0"},
+    chests = {""},
 
     -- The network name of the turtle
-    networkName = "turtle_0",
+    networkName = "",
 
     -- The network name of the monitor to display the shop information on
     monitorSide = "left",
@@ -79,10 +76,10 @@ return {
 
   webhook = {
     -- A url to a Discord webhook to send logs.
-    url = "https://discord.com/api/webhooks/1057409021633634324/2OCfedid10zVYM0zn8xf19aTZt5uGuJ_8JttTX6UJmILuZhrz6jbwQBt7-KUcyJdhUwA",
+    url = "",
 
     -- Your Discord ID. This will be pinged when an error occurs.
-    ownerUserID = "356209633313947648",
+    ownerUserID = "",
 
     -- Toggle individual messages
     messages = {
@@ -114,9 +111,9 @@ return {
   -- Profit sharing
   profitSharing = {
     -- The address to send
-    ["k9kig3qq9n"] = {
+    ["k000000000"] = {
       -- Percentage
-      percent = 80,
+      percent = 0,
       -- Metadata (for donate meta requirements)
       meta = "cool=awesome"
     }
