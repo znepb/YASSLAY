@@ -1,4 +1,5 @@
 # Denarius
+**THIS REPOSITORY HAS BEEN MOVED TO https://github.com/Snowflake-Software/denarius**
 
 Denarius is a highly-configurable Krist-based shop for modern ComputerCraft. It allows you to easily set up your own shop to sell items in modern ComputerCraft.
 
